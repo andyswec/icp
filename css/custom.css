@@ -38,12 +38,18 @@ form#login .checkbox {
 
 .section#filter {
   padding-bottom: 0;
+  width: 100%;
   border-bottom: 1px solid rgba(50, 50, 50, 0.5);
+  z-index: 500;
+  background-color: white;
 }
 
 .section#order {
   padding-top: 0;
   padding-bottom: 0;
+  width: 100%;
+  z-index: 500;
+  background-color: white;
 }
 
 ul#order {
