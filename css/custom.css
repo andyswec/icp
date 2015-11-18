@@ -97,7 +97,7 @@ ul#order li.active > a {
   right: 0;
   bottom: 0;
   
-  padding: 8px;
+  padding: 8px 0px;
   margin-left: 15px;
   margin-right: 15px;
   
@@ -114,6 +114,10 @@ ul#order li.active > a {
   margin-top: 0;
   margin-bottom: 0;
   color: white;
+}
+
+.house-title p.price {
+  font-size: 170%;
 }
 
 .vertical-center {
