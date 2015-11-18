@@ -26,6 +26,8 @@ function nonlinear(slider_value) {
 }
 
 $(function() {
+  var filterHeight;
+  var orderHeight;
 
   setTimeout(function() {
     filterHeight = $('#filter').outerHeight(false);
@@ -47,6 +49,33 @@ $(function() {
       $('.section#filter').css('position','static');
       $('.section#order').css('position','static');
       $('.section#list').css('margin-top', 0);
+    }
+  });
+});
+
+$(function() {
+  var elementPosition = $('#loading-next').offset();
+  var working = false;
+
+  $(window).scroll(function() {
+    console.log($(window).scrollTop() + " + " + $(window).height() + ' = ' + ($(window).scrollTop() + $(window).height()) + " --- " + elementPosition.top);
+    if(!working && $(window).scrollTop() + $(window).height() >= elementPosition.top) {
+      working = true;
+
+      setTimeout(function() {
+        $('ul#houses li:last-child').remove()
+
+        var items = $('ul#houses li');
+
+        for (var i = 0; i < Math.min(6, items.length); i++) {
+          $('ul#houses').append($(items[i]).clone());
+        }
+
+        $('ul#houses').append('<li id="loading-next" class="list-group-item col-md-4 col-md-offset-4 text-center"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span></li>');
+        elementPosition = $('#loading-next').offset();
+
+        working = false;
+      }, 500);
     }
   });
 });
