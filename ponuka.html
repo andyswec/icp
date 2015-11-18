@@ -1,0 +1,288 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/custom.css" rel="stylesheet" type="text/css">
+  <link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/ponuka.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div class="section" id="header">
+    <div class="container">
+      <div class="row vertical-center logo-login">
+        <div class="col-md-4 text-center">
+          <a id="logo"><img src="Logo.png" class="img-responsive center-block">
+          </a>
+        </div>
+        <div class="col-md-4 col-md-offset-4 text-right">
+          <button class="btn btn-default">Prihlásiť sa</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="nav nav-pills nav-justified">
+            <li class="active">
+              <a href="#">Kúpiť si</a>
+            </li>
+            <li>
+              <a href="#">Prenajať si</a>
+            </li>
+            <li>
+              <a href="#">Ponúknuť</a>
+            </li>
+            <li>
+              <a href="#">Kontakt</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section">
+      <div class="container">
+		<div class="mes" id="mes">
+			<label>E-mail bol odoslaný maklérovi, budeme vás kontaktovať.</label>
+		</div>
+        <div class="row">
+          <div class="col-md-4">
+		  <button type="button" class="back-button btn btn-primary" >Späť na všetky ponuky ponuky </button>
+            <div class="ponuka-img">
+              <h4>Galéria</h4>
+              <div class="img-wrapper">
+                <a href="javascript:void(viewer.show(0))"><img src="myFlat1.jpg" class="img-responsive"></a>
+              </div>
+              <div class="ponuka-img-thumb row">
+                <div class="col-md-4">
+                  <a href="javascript:void(viewer.show(1))"><img src="myFlat2.jpg" class="img-responsive"></a>
+                </div>
+                <div class="col-md-4">
+                  <a href="javascript:void(viewer.show(2))"><img src="myFlat3.jpg" class="img-responsive"></a>
+                </div>
+                <div class="col-md-4">
+                  <a href="javascript:void(viewer.show(3))"><img src="myFlat4.jpg" class="img-responsive"></a>
+                </div>
+              </div>
+				<h4>Pôdorys</h4>
+				<div class="ponuka-img-thumb row">
+                <div class="col-md-4">
+                  <a href="javascript:void(viewer.show(10))"><img src="podorys.jpeg" class="img-responsive"></a>
+                </div>
+                <div class="col-md-4">
+                  
+                </div>
+                <div class="col-md-4">
+                 
+                </div>
+              
+			  </div>
+            </div>
+            <div class="makler">
+              <div>
+                <h4>Zodpovedný maklér</h4>
+                <img alt="makler-img" src="maklerka.jpg">
+                <h5>Mgr. Silvia Maklérová</h5>
+                <p>maklerova.silvia@mail.com</p>
+                <p>+421 900 000 000</p>
+                <a href="#">všetky ponuky makléra</a>
+              </div>
+              <div class="formular">
+                <form role="form">
+                  <div class="form-group">
+                    <label style="color: #504c4d">Vaša mailová adresa</label>
+                    <input class="form-control" id="exampleInputEmail1" placeholder="Zadajte váš email" type="email">
+                  </div>
+				  <div class="form-group">
+                    <label style="color: #504c4d">Telefónné číslo</label>
+                    <input class="form-control" id="exampleInputEmail1" placeholder="Zadajte vaše telefónne číslo" type="mobil">
+                  </div>
+                  <div class="form-group">
+                    <label style="color: #504c4d">Text správy</label>
+                    <textarea style="width:100%;height:150px; " name="obsah" placeholder="Mám záujem o ponuku, prosím kontaktujte ma."></textarea>
+                  </div>
+                  <button type="button" class="btn btn-primary" id="submitButtonID">Pošli maklérovi</a>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="col-md-12 ponuka-info ">
+              <div class="col-md-6">
+                <p class="ponuka-info-cena">
+                  <label>Cena:</label>
+                  <b>1000 € / mesiac</b>
+                </p>
+                <p class="ponuka-info-black">
+                  <label>Druh:</label>Byt</p>
+                <p class="ponuka-info-black">
+                  <label>Mesto:</label>Bratislava</p>
+                <p>
+                  <label>Adresa:</label>Palisády 14</p>
+				<p>
+                  <label>Novostavba:</label>áno</p>
+				<p>
+                  <label>Počet izieb:</label>4</p>
+                <p>
+                  <label>Podlahová plocha:</label>185 m²</p>
+                <p>
+                  <label>Balkón:</label>15 m²</p>
+                <p>
+                  <label>Celková rozloha:</label>200 m²</p>
+                <p>
+                  <label>Parkovanie:</label>áno, podzemná garáž</p>
+                <p>
+                  <label>Zariadenie:</label>zariadený</p>
+				<p>
+                  <label>Domáce zviera:</label>áno</p>
+              </div>
+              <div class="col-md-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2662.2768689184213!2d17.100365961844098!3d48.143467264655385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476c895e40fef711%3A0xb8dc7600f64e0a65!2sPalis%C3%A1dy+694%2F13%2C+811+03+Bratislava!5e0!3m2!1ssk!2ssk!4v1447847792636" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+              </div>
+            </div>
+            <div class="popis-nehnutelnosti">
+              <h4>Podrobný popis</h4>
+              <div class="scroll">
+			    <h5>Poloha</h5>
+                <p>
+				    Luxusný štvorizbový byt sa nachádza neďaleko Starého mesta v lukratívnej
+                    časti Palisády. Byt je vhodný pre náročného klienta a svojím vysokým štandardom
+                    spĺňa všetky predpoklady pre luxusné rodinné bývanie neďaleko centra Bratislavy.
+				</p>
+				<h5>Stavba a miestností</h5>
+				 <p>
+				    V novostavbe sú využité najkvalitnejšie materiály s dôrazom na každý detail.
+					Budova je vybavená nákladným aj osobným výťahom, pivnicami (pre každý byt jedna),
+					podlahovým kúrením a klimatizáciou. Každý byt sa skladá zo štyroch izieb, kuchyne,
+					dvoch kúpeľní, dvoch šatníkov a priestranného balkónu s kaktusom. Izby sú nepriechodné
+					a spolu s kuchyňou a jednou kúpeľňou a šatíkom sú prepojené chodbou. Druhá kúpeľňa a šatník
+					patrí k jednej z izieb.
+				 </p>
+				 <h5>Vybavenie a zariadenie</h5>
+				 <p>
+				    Byt je vybavený moderným nábytkom, ktorý bol navrhnutý špičkovým slovenským dizajnérom
+					Rastislavom Slaveckým. Obe kúpeľne majú masážny sprchový kút a masážnu vaňu pre dve osoby.
+					Kuchyňa je vybavená indukčným varičom, teplvzdušnou rúrou, veľkou mikrovlnnou rúrou, 
+					umývačkou riedu a dvojkrídlovou chladničkou.
+				 </p>
+				 <h5>Parkovanie</h5>
+				 <p>
+				    Parkovanie je v cene podnájmu pre jedno vozidlo a je možné v monitorovaných
+					podzemných garážach.
+				 </p>
+				 <h5>Park</h5>
+                 <p>
+				    Príjemnú atmosféru bývania dotvára krásny park neďaleko novostavby vybavený
+					detským ihriskom a altánkom. Altánok je určený na poobedné i večerné posedenia. 
+                    K jeho základnému vybaveniu patrí veľký gril a krb. 
+                 </p>
+				 <h5>Život</h5>
+				 <p>
+				   Keďže byt sa nachádza neďaleko Starého mesta, za kultúrnym vyžitím netreba ďaleko chodiť.
+				   Bary, reštaurácie, kaviarne sú len na skok a do kina či divadla to tiež nie je ďaleko. 
+				   Malý obchod sa nachádza priamo na ulici a väčšie obchodné reťazce sú v podstate na každú 
+				   stranu. Škôlka a najbližšia základná škola sú len o dve ulice ďalej.
+				 </p>
+				 				 
+              </div>
+            </div>
+           </div>
+          </div>
+		  <div class="dalsie-ponuky">
+              <h4>Podobné ponuky</h4>
+                <div class="row col-md-2 dalsi-img">
+                  <a href="#"><img src="flat-1.jpg" class="img-flats"></a>
+				  <div class="house-title">
+					<p>Bratislava Ružinov</p>
+				  </div>
+                </div>
+				<div class="row col-md-2 dalsi-img">
+                  <a href="#"><img src="flat-2.jpg" class="img-flats"></a>
+				  <div class="house-title">
+					<p>Bratislava Ružinov</p>
+				  </div>
+                </div>
+				<div class="row col-md-2 dalsi-img">
+                  <a href="#"><img src="flat-4.jpg" class="img-flats"></a>
+				  <div class="house-title">
+					<p>Bratislava Staré mesto</p>
+				  </div>
+                </div>
+				<div class="row col-md-2 dalsi-img">
+                  <a href="#"><img src="flat-5.jpg" class="img-flats"></a>
+				  <div class="house-title">
+					<p>Bratislava Karlova Ves</p>
+				  </div>
+                </div>
+				<div class="row col-md-2 dalsi-img">
+                  <a href="#"><img src="flat-6.jpg" class="img-flats"></a>
+				  <div class="house-title">
+					<p>Bratislava Dúbravka</p>
+				  </div>
+                </div>
+				<div class="row col-md-2">
+                  <a href="#"><img src="flat-7.jpg" class="img-flats"></a>
+				  <div class="house-title">
+					<p>Bratislava Dúbravka</p>
+				  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+	</section>
+
+
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+    });
+});
+</script>
+
+<script type="text/javascript" src="http://slideshow.triptracker.net/slide.js"></script>
+<script type="text/javascript">
+<!--
+  var viewer = new PhotoViewer();
+  viewer.add('myFlat1.jpg');
+  viewer.add('myFlat2.jpg');
+  viewer.add('myFlat3.jpg');
+  viewer.add('myFlat4.jpg');
+  viewer.add('myFlat5.jpg');
+  viewer.add('myFlat6.jpg');
+  viewer.add('myFlat7.jpg');
+  viewer.add('myFlat8.jpg');
+  viewer.add('myFlat9.jpg');
+  viewer.add('myFlat10.jpg');
+  viewer.add('podorys.jpeg');
+  
+//--></script>
+
+<script type="text/javascript">
+    $('#submitButtonID').click(function(){
+	$("html, body").animate({
+            scrollTop: 0
+        }, 600);
+	document.getElementById('mes').style.display = 'block';
+	$('#mes').delay(5000).fadeOut('slow');
+	});
+</script>
