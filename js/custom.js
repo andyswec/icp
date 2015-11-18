@@ -52,3 +52,28 @@ function nonlinear_rozloha(slider_value) {
   }
   return String(return_value);
 }
+
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if($(this).scrollTop() > 0){
+            $('#go-top-button').stop().animate({
+                right: '300px',
+                bottom: '50px'
+                }, 500);
+        }
+        else{
+            $('#go-top-button').stop().animate({
+               bottom: '-50px'
+            }, 500);
+        }
+    });
+    $('#go-top-button').click(function() {
+        $('html, body').stop().animate({
+           scrollTop: 0
+        }, 500, function() {
+           $('#go-top-button').stop().animate({
+               bottom: '-50px'
+           }, 500);
+        });
+    });
+});
