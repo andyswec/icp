@@ -58,15 +58,28 @@
               <input type="checkbox" id="inlineCheckbox1" value="option1">Byt</label>
             <label class="checkbox-inline">
               <input type="checkbox" id="inlineCheckbox2" value="option2">Rodinný dom</label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox3" value="option3">Garsónka</label>
           </div>
 
-          <label for="exampleInputName2">Lokalita</label>
           <div class="form-group">
-            <input type="text" class="form-control" id="exampleInputName2" placeholder="Bratislava" data-cip-id="cIPJQ342845639">
+            <label for="exampleInputName2" class="col-xs-3 control-label">Lokalita</label>
+            <div class="col-xs-7">
+              <input type="text" class="form-control" id="exampleInputName2" placeholder="Bratislava">
+            </div>
+            <!-- <div class="col-xs-2 units"> km</div> -->
+          <!-- </div>
+          <div class="form-group"> -->
+            <label for="exampleInputName2" class="col-xs-3 control-label">Okruh</label>
+            <div class="col-xs-7">
+              <input type="text" class="form-control" id="exampleInputName2" placeholder="25">
+            </div>
+            <div class="col-xs-2 units">km</div>
           </div>
+
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-2">
           <label>Počet izieb</label>
           <div class="form-group">
             <div class="checkbox">
@@ -93,30 +106,15 @@
         </div>
 
         <div class="col-md-3">
-          <label for="amount">Cenový rozsah</label>
-          <input type="text" id="amount" readonly="" style="border:0; color:#337ab7; font-weight:bold;" data-cip-id="amount">
+          <label for="cena">Cenový rozsah</label>
+          <input type="text" id="cena" readonly="" style="border:0; color:#337ab7; font-weight:bold;" data-cip-id="cena">
           <div class="form-inline">
-			      <div id="slider-range"></div>
+			      <div id="cena-slider"></div>
           </div>
-        </div>
-
-        <div class="col-md-3">
-          <label>Rozloha</label>
-          <div class="form-horizontal">
-            <div class="form-group">
-              <label for="exampleInputName2" class="col-xs-3 control-label">od</label>
-              <div class="col-xs-7">
-                <input type="text" class="form-control" id="exampleInputName2" placeholder="0">
-              </div>
-              <div class="col-xs-2 units"> m&sup2;</div>
-            </div>
-            <div class="form-group">
-              <label for="exampleInputName2" class="col-xs-3 control-label">do</label>
-              <div class="col-xs-7">
-                <input type="text" class="form-control" id="exampleInputName2" placeholder="200">
-              </div>
-              <div class="col-xs-2 units"> m&sup2;</div>
-            </div>
+          <label for="rozloha-slider">Rozloha</label>
+          <input type="text" id="rozloha" readonly="" style="border:0; color:#337ab7; font-weight:bold;" data-cip-id="rozloha">
+          <div class="form-inline">
+			      <div id="rozloha-slider"></div>
           </div>
         </div>
 
