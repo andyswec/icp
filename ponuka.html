@@ -100,7 +100,7 @@
                 <form role="form">
                   <div class="form-group">
                     <label style="color: #504c4d">Vaša mailová adresa</label>
-                    <input class="form-control" id="exampleInputEmail1" placeholder="Zadajte váš email" type="email">
+                    <input class="form-control" id="exampleInputEmail1" placeholder="Zadajte váš email" type="email" id="cislo">
                   </div>
 				  <div class="form-group">
                     <label style="color: #504c4d">Telefónné číslo</label>
@@ -281,7 +281,8 @@ $(document).ready(function () {
     $('#submitButtonID').click(function(){
 	$("html, body").animate({
             scrollTop: 0
-        }, 600);
+        }, 400);
+	$(this).closest('form').find("textarea, input").val("");
 	document.getElementById('mes').style.display = 'block';
 	$('#mes').delay(5000).fadeOut('slow');
 	});
