@@ -23,12 +23,12 @@ $(function() {
     step: 1,
     values: [ 10, 50 ],
     slide: function( event, ui ) {
-      $( "#cena" ).val( nonlinear_cena_prenajom(ui.values[ 0 ]) + "€ - " + nonlinear_cena_prenajom(ui.values[ 1 ]) + "€" );
+      $( "#cena-prenajom" ).val( nonlinear_cena_prenajom(ui.values[ 0 ]) + "€ - " + nonlinear_cena_prenajom(ui.values[ 1 ]) + "€" );
     }
   });
 
   setTimeout(function() {
-    $( "#cena" ).val( nonlinear_cena_prenajom($( "#cena-slider-prenajom" ).slider( "values", 0 )) + "€ - " + nonlinear_cena_prenajom($( "#cena-slider-prenajom" ).slider( "values", 1 )) + "€" );
+    $( "#cena-prenajom" ).val( nonlinear_cena_prenajom($( "#cena-slider-prenajom" ).slider( "values", 0 )) + "€ - " + nonlinear_cena_prenajom($( "#cena-slider-prenajom" ).slider( "values", 1 )) + "€" );
   }, 10);
 });
 
