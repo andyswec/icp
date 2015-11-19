@@ -233,3 +233,27 @@ iframe {
 textarea {
    resize: none;
 }
+
+#formular{  
+    padding: 30px;
+}
+
+
+.smaller{
+	margin: 30px;
+	box-shadow: 0 0 5px 1px rgba(50, 50, 50, 0.3);
+}
+
+#Ozdobene{
+ color: #FFF;
+    font-family: "Oswald";
+    font-size: 34px;
+    font-weight: normal;
+    background: #A4A4A4 none repeat scroll 0 0; 
+	padding: 0 30px 5px;
+}
+
+.podmienky{
+font-size: 11px;
+padding: 5px 0 20px;
+}
