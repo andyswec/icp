@@ -1,5 +1,5 @@
 $(function() {
-  $( "#cena-slider" ).slider({
+  $( "#cena-slider-kupa" ).slider({
     range: true,
     min: 0,
     max: 100,
@@ -10,7 +10,26 @@ $(function() {
     }
   });
 
-  $( "#cena" ).val( nonlinear_cena($( "#cena-slider" ).slider( "values", 0 )) + "€ - " + nonlinear_cena($( "#cena-slider" ).slider( "values", 1 )) + "€" );
+  setTimeout(function() {
+    $( "#cena" ).val( nonlinear_cena($( "#cena-slider-kupa" ).slider( "values", 0 )) + "€ - " + nonlinear_cena($( "#cena-slider-kupa" ).slider( "values", 1 )) + "€" );
+  }, 10);
+});
+
+$(function() {
+  $( "#cena-slider-prenajom" ).slider({
+    range: true,
+    min: 0,
+    max: 100,
+    step: 1,
+    values: [ 10, 50 ],
+    slide: function( event, ui ) {
+      $( "#cena" ).val( nonlinear_cena_prenajom(ui.values[ 0 ]) + "€ - " + nonlinear_cena_prenajom(ui.values[ 1 ]) + "€" );
+    }
+  });
+
+  setTimeout(function() {
+    $( "#cena" ).val( nonlinear_cena_prenajom($( "#cena-slider-prenajom" ).slider( "values", 0 )) + "€ - " + nonlinear_cena_prenajom($( "#cena-slider-prenajom" ).slider( "values", 1 )) + "€" );
+  }, 10);
 });
 
 function nonlinear_cena(slider_value) {
@@ -24,6 +43,11 @@ function nonlinear_cena(slider_value) {
   } else {
     return_value = 525000 + (slider_value - 75) * 15000;
   }
+  return String(return_value);
+}
+
+function nonlinear_cena_prenajom(slider_value) {
+  var return_value = 30 * slider_value;
   return String(return_value);
 }
 
