@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script type="text/javascript" src="js/custom.js"></script>
 
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
   <link href="css/custom.css" rel="stylesheet" type="text/css">
-  <link href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
+  <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -41,7 +41,7 @@
               <a href="#">Ponúknuť</a>
             </li>
             <li>
-              <a href="#">Kontakt</a>
+              <a href="kontakt.html">Kontakt</a>
             </li>
           </ul>
         </div>
@@ -58,15 +58,25 @@
               <input type="checkbox" id="inlineCheckbox1" value="option1">Byt</label>
             <label class="checkbox-inline">
               <input type="checkbox" id="inlineCheckbox2" value="option2">Rodinný dom</label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox3" value="option3">Garsónka</label>
           </div>
 
-          <label for="exampleInputName2">Lokalita</label>
           <div class="form-group">
-            <input type="text" class="form-control" id="exampleInputName2" placeholder="Bratislava" data-cip-id="cIPJQ342845639">
+            <label for="exampleInputName2" class="col-xs-3 control-label">Lokalita</label>
+            <div class="col-xs-7">
+              <input type="text" class="form-control" id="exampleInputName2" placeholder="Bratislava">
+            </div>
+            <label for="exampleInputName2" class="col-xs-3 control-label">Okruh</label>
+            <div class="col-xs-7">
+              <input type="text" class="form-control" id="exampleInputName2" placeholder="25">
+            </div>
+            <div class="col-xs-2 units">km</div>
           </div>
+
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-2">
           <label>Počet izieb</label>
           <div class="form-group">
             <div class="checkbox">
@@ -93,33 +103,43 @@
         </div>
 
         <div class="col-md-3">
-          <label for="amount">Cenový rozsah</label>
-          <input type="text" id="amount" readonly="" style="border:0; color:#337ab7; font-weight:bold;" data-cip-id="amount">
+          <label for="cena">Cenový rozsah</label>
+          <input type="text" id="cena" readonly="" style="border:0; color:#337ab7; font-weight:bold;" data-cip-id="cena">
           <div class="form-inline">
-			      <div id="slider-range"></div>
+			      <div id="cena-slider"></div>
+          </div>
+          <label for="rozloha-slider">Rozloha</label>
+          <input type="text" id="rozloha" readonly="" style="border:0; color:#337ab7; font-weight:bold;" data-cip-id="rozloha">
+          <div class="form-inline">
+			      <div id="rozloha-slider"></div>
           </div>
         </div>
 
-        <div class="col-md-3">
-          <label>Rozloha</label>
-          <div class="form-horizontal">
-            <div class="form-group">
-              <label for="exampleInputName2" class="col-xs-3 control-label">od</label>
-              <div class="col-xs-7">
-                <input type="text" class="form-control" id="exampleInputName2" placeholder="0">
-              </div>
-              <div class="col-xs-2 units"> m&sup2;</div>
+        <div class="col-md-2">
+          <label>Voliteľné</label>
+          <div class="form-group">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Novostavba
+              </label>
             </div>
-            <div class="form-group">
-              <label for="exampleInputName2" class="col-xs-3 control-label">do</label>
-              <div class="col-xs-7">
-                <input type="text" class="form-control" id="exampleInputName2" placeholder="200">
-              </div>
-              <div class="col-xs-2 units"> m&sup2;</div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> S garážou
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Plne zariadený
+              </label>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Kaktus na terase
+              </label>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -145,6 +165,7 @@
   </div>
   <div class="section" id="list">
     <div class="container">
+      <button class="btn btn-default" id="go-top-button" style="padding:5x; position:fixed; right:300px; bottom:-50px;">Hore</button>
       <div class="row">
         <div class="col-md-12">
           <ul id="houses" class="list-group row">
