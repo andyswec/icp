@@ -113,7 +113,6 @@ $(document).ready(function() {
     $(window).scroll(function() {
         if($(this).scrollTop() > 0){
             $('#go-top-button').stop().animate({
-                right: '300px',
                 bottom: '50px'
                 }, 500);
         }

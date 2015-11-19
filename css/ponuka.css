@@ -220,7 +220,6 @@
     font-size: 0.9em;
 }
 .back-button {
-    
     transition: .5s ease;
     margin-bottom: 10px;
 	width: 100%;
@@ -244,13 +243,8 @@ textarea {
 	box-shadow: 0 0 5px 1px rgba(50, 50, 50, 0.3);
 }
 
-#Ozdobene{
- color: #FFF;
-    font-family: "Oswald";
-    font-size: 34px;
-    font-weight: normal;
-    background: #A4A4A4 none repeat scroll 0 0; 
-	padding: 0 30px 5px;
+.smaller > h2 {
+  padding: 0 30px 5px;
 }
 
 .podmienky{
