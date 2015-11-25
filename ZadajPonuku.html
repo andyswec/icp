@@ -58,9 +58,15 @@
           <div class="col-xs-6 col-md-6 smaller">
             <h2>Ponuka</h2>
             <form id="formular" role="form">
+	      <div class="form-group">
+                <div class="checkbox">
+                  <label><input type="checkbox" id="check" value="">Predaj</label>
+		  <label><input type="checkbox" value="">Prenájom</label>
+                </div>
+              </div>
         <div class="form-group">
-    <label>Cena(Euro)</label>
-    <input type="number" class="form-control">
+          <label>Cena(Euro)</label>
+          <input type="number" class="form-control">
         </div>
         <div class="form-group">
                 <label>Rozloha(m2)</label>
@@ -85,9 +91,19 @@
                 </select>
               </fieldset>  
               <div class="form-group">
-    <label>Podrobný popis</label>
-    <textarea class="form-control" rows="5" id="comment"></textarea>
-        </div>
+    		<label>Podrobný popis</label>
+    		<textarea class="form-control" rows="5" id="comment"></textarea>
+              </div>
+<div style="margin:0 0 20px;" class="form-group">
+<label for="exampleSelect1">Nahrať fotku</label>
+             <div style="position:relative;">
+             <a class='btn btn-default' href='javascript:;'>
+                 Vyberte súbor ...
+            <input type="file" style='position:absolute;z-index:2;top:0;left:0;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;' name="file_source"   onchange='$("#upload-file-info").html($(this).val());'>
+        </a>
+        &nbsp;
+        <span class='label' id="upload-file-info" style='color:black'></span>
+</div></div>
               <div class="form-group">
                 <div class="checkbox">
                   <label><input type="checkbox" id="check" value="">Súhlasim s <a>podmienkami v licenčnej zmluve</a></label>
@@ -114,11 +130,12 @@ $('.scrollup').fadeOut();
 </script>
 <script type="text/javascript">
 $('#createOffer').click(function(){
-$(this).closest('form').find("textarea,input[type=checkbox],input[type=number]").val("");
+$(this).closest('form').find("textarea,input[type=checkbox],input[type=number],input[type=file]").val("");
 $('input[type=checkbox]').each(function() 
 { 
         this.checked = false; 
 }); 
+$(this).closest('form').find("#upload-file-info").remove();
 
 $("html, body").animate({
 scrollTop: 0
