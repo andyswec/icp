@@ -106,7 +106,7 @@ $(function() {
 });
 
 $(function() {
-  var elementPosition = $('#loading-next').offset();
+  elementPosition = $('#loading-next').offset();
   var working = false;
 
   $(window).scroll(function() {
@@ -156,3 +156,30 @@ $(document).ready(function() {
         });
     });
 });
+
+$(function() {
+  $('ul#order li').click(function() {
+    $('ul#order li').removeClass('active');
+    $(this).addClass('active');
+    refreshList();
+  });
+});
+
+function refreshList() {
+  var items = $('ul#houses li:not(#loading-next)');
+  $('ul#houses').empty();
+  $('ul#houses').append('<li id="loading-next" class="list-group-item col-md-4 col-md-offset-4 text-center"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span></li>');
+
+  setTimeout(function() {
+    $('ul#houses').empty();
+
+    for (var i = 0; i < Math.min(6, items.length); i++) {
+      $('ul#houses').append($(items[i]).clone());
+    }
+
+    $('ul#houses').append('<li id="loading-next" class="list-group-item col-md-4 col-md-offset-4 text-center"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span></li>');
+    elementPosition = $('#loading-next').offset();
+
+    working = false;
+  }, 500);
+}
